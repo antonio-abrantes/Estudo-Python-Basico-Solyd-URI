@@ -7,22 +7,22 @@ n2 = float(n2)
 n3 = float(n3)
 n4 = float(n4)
 
-m = float(((n1 * 2.0) + (n2 * 3.0) + (n3 * 4.0) + (n4 * 1.0)) / 10.0)
+m = float(((n1*2) + (n2*3) + (n3*4) + (n4*1))/10)
 
-print("Media:", locale.format("%.1f", m))
-print("Media:", locale.format("%.3f", m))
-if (m >= 7.0):
-    print("Aluno aprovado.")
+print("Media:", locale.format("%1.1f", m))
 
-elif (m < 5.0):
-    print("Aluno reprovado.")
-else:
+if (m >= 7):
+     print("Aluno aprovado.")
+
+elif(m < 5):
+     print("Aluno reprovado.")
+elif(m >= 5 and m < 7):
     print("Aluno em exame.")
     notaex = float(input("Nota do exame: "))
-    mF = float((m + notaex) / 2.0)
-    if (mF >= 5.0):
-        print("Aluno aprovado.")
+    m = float((m + notaex)/2)
+    if(m >= 5):
+       print("Aluno aprovado.")
     else:
-        print("Aluno reprovado.")
+       print("Aluno reprovado.")
 
-    print("Media final:", locale.format("%.1f", mF))
+    print("Media final:",locale.format("%1.1f", m))

@@ -1,22 +1,20 @@
-# -*- coding: utf-8 -*-
 ano = 0
 mes = 0
 
 dias = int(input())
 
-dia = (dias % 365) % 30
+dia = int((dias % 365) % 30)
 
 while True:
-    if dias >= 365:
+    if (dias >= 365):
         dias = dias - 365
         ano = ano + 1
 
-    if (dias < 365) and (dias >= 30):
-         dias = dias - 30
-         mes = mes + 1
-
-    dias = dias - 1
-    if(dias == 0):
+    if (dias < 365 and dias >= 30):
+        dias = dias - 30
+        mes = mes + 1
+        dias -= dias
+    if(dias < 30):
         break
 
 print(ano, "ano(s)")
